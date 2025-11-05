@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/build/">
-    <File Path="../.github/Workflow/publish.yml" />
+    <File Path="../.github/workflows/publish.yml" />
     <File Path="../build/Author.props" />
     <File Path="../build/Common.props" />
     <File Path="../build/icon.png" />
