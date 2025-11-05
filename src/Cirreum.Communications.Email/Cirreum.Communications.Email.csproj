@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>Email Communications Library.</Description>
+		<PackageTags>email</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Cirreum\Cirreum.Communications.Email\src\../../README.md" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+<Project>
+
+	<!-- Local Release Version -->
+	<PropertyGroup Label="Local Release Version" Condition="'$(TF_BUILD)' != 'true' And '$(Configuration)'=='Release'">
+		<VersionPrefix Condition="$(VersionPrefix) == ''">1.0.100</VersionPrefix>
+		<VersionPrefix Condition="$(VersionSuffix) == ''">rc</VersionPrefix>
+	</PropertyGroup>
+
+	<!-- Imports -->
+	<Import Project="..\build\Author.props" />
+	<Import Project="..\build\Icon.props" />
+	<Import Project="..\build\SourceLink.props" />
+	<Import Project="..\build\PackageInfo.props" />
+	<Import Project="..\build\Versioning.props" />
+	<Import Project="..\build\Common.props" />
+
+	<!-- CI/CD Packaging -->
+	<PropertyGroup Label="CI/CD Packaging" Condition="'$(TF_BUILD)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+</Project>
