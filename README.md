@@ -1,6 +1,8 @@
 # Cirreum.Communications.Email
 
-![Static Badge](https://img.shields.io/badge/semver-v1.0.100--rc-blue)
+[![NuGet Version](https://img.shields.io/nuget/v/Cirreum.Communications.Email.svg?style=flat-square)](https://www.nuget.org/packages/Cirreum.Communications.Email/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Cirreum.Communications.Email.svg?style=flat-square)](https://www.nuget.org/packages/Cirreum.Communications.Email/)
+[![GitHub Release](https://img.shields.io/github/v/release/cirreum/Cirreum.Communications.Email?style=flat-square)](https://github.com/cirreum/Cirreum.Communications.Email/releases)
 
 Core abstractions and models for email communication services within the Cirreum ecosystem.
 
