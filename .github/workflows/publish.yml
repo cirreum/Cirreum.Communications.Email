@@ -3,10 +3,10 @@ name: Publish to NuGet
 on:
   release:
     types: [published]
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
 
 permissions:
-  id-token: write  # Required for OIDC authentication
+  id-token: write
   contents: read
 
 jobs:
@@ -20,16 +20,19 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '10.0.x'  # Adjust to your version
+        dotnet-version: '10.0.x'
     
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Cirreum.Communications.Email.slnx
+      working-directory: ./src
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build Cirreum.Communications.Email.slnx --configuration Release --no-restore
+      working-directory: ./src
     
     - name: Pack
-      run: dotnet pack --configuration Release --no-build --output ./artifacts
+      run: dotnet pack Cirreum.Communications.Email.slnx --configuration Release --no-build --output ../artifacts
+      working-directory: ./src
     
     - name: Publish to NuGet.org
       run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
