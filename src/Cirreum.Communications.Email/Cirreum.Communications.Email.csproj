@@ -5,8 +5,4 @@
 		<PackageTags>email</PackageTags>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <None Remove="C:\Cirreum\Cirreum.Communications.Email\src\../../README.md" />
-	</ItemGroup>
-
 </Project>
